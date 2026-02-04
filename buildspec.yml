@@ -1,22 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 20
-  
-  pre_build:
-    commands:
-      - echo Installing dependencies...
-      - npm ci
-  
   build:
     commands:
-      - echo Build started on `date`
-      - npm run build
-      - echo Build completed on `date`
+      - echo Preparing files for deployment
 
 artifacts:
   files:
     - '**/*'
-  base-directory: 'build'
+  exclude-paths:
+    - 'buildspec.yml'
+    - 'deploytos3.yml'
+    - '.git/**/*'
