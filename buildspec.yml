@@ -1,4 +1,4 @@
-version: 0.2
+vversion: 0.2
 
 phases:
   build:
@@ -7,8 +7,7 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
-  exclude-paths:
-    - 'buildspec.yml'
-    - 'deploytos3.yml'
-    - '.git/**/*'
+    - 'index.html'
+    - 'script.js'
+    - 'style.css'
+    - 'screenshots/**/*'
